@@ -1,6 +1,6 @@
 # NTUA ECE SAAS 2024 Project
 
-This repository contains the implementation of our project for the NTUA ECE SAAS 2024 course. The project is structured around multiple microservices.
+Implements a SaaS-based math-solving web application for the Ece Ntua SaaS 2023-24 course. The project is structured around multiple microservices, allowing users to solve complex mathematical problems by purchasing credits and utilizing computational resources. Each microservice handles a distinct aspect of the application, such as problem-solving logic, credit management, and user interaction.
 
 ## Table of Contents
 1. [Contributors](#contributors-team-30)
