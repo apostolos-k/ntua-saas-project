@@ -1,4 +1,4 @@
-# NTUA ECE SAAS 2024 Project
+# Solve my Problem - Saas
 
 Implements a SaaS-based math-solving web application for the Ece Ntua SaaS 2023-24 course. The project is structured around multiple microservices, allowing users to solve complex mathematical problems by purchasing credits and utilizing computational resources. Each microservice handles a distinct aspect of the application, such as problem-solving logic, credit management, and user interaction.
 
