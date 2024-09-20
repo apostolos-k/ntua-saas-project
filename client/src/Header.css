@@ -1,0 +1,47 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.header > div {
+    flex: 1;
+}
+
+.header .left {
+    text-align: left;
+}
+
+.header .center {
+    text-align: center;
+}
+
+.header .right {
+    text-align: right;
+}
+
+.server-health {
+    font-size: 18px;
+}
+
+.server-health.good {
+    color: green;
+}
+
+.server-health.warning {
+    color: orange;
+}
+
+.server-health.bad {
+    color: red;
+}
+
+.date-time {
+    font-size: 18px;
+}
+
+.logo img {
+    height: 30px;
+}

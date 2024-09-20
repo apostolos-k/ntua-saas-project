@@ -1,0 +1,128 @@
+services:
+  
+  or-tools:
+    build:
+      context: ./OR-Tools
+      dockerfile: Dockerfile
+    container_name: or-tools
+    networks:
+      - saas
+    environment:
+      SUBMISSIONS_RESULTS_URL: http://submissions-results:5500
+      SUBMISSIONS_MANAGEMENT_URL: http://submissions-management:6500
+      SOLVER_MANAGER_URL: http://solver-manager:8500
+      MONGO_URL: mongodb://mongo:27017
+    ports:
+      - "9500:9500"
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 800M
+    depends_on:
+      - submissions-results
+      - submissions-management
+      - solver-manager
+      - mongo
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    container_name: frontend
+    networks:
+      - saas
+    environment:
+      SUBMISSIONS_RESULTS_URL: http://submissions-results:5500
+      SUBMISSIONS_MANAGEMENT_URL: http://submissions-management:6500
+      CREDIT_MANAGER_URL: http://credit-manager:7500
+      SOLVER_MANAGER_URL: http://solver-manager:8500
+    ports:
+      - "3000:3000"
+    depends_on:
+      - submissions-results
+      - submissions-management
+      - credit-manager
+      - solver-manager
+  
+  submissions-management:
+    build:
+      context: ./submissions-management
+      dockerfile: Dockerfile
+    container_name: submissions-management
+    networks:
+      - saas
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+      CREDIT_MANAGER_URL: http://credit-manager:7500
+      OR_TOOLS_URL: http://or-tools:9500
+      SOLVER_MANAGER_URL: http://solver-manager:8500
+    ports:
+      - "6500:6500"
+    depends_on:
+      - mongo
+      - credit-manager
+      - solver-manager
+
+  credit-manager:
+    build:
+      context: ./credit-manager
+      dockerfile: Dockerfile
+    container_name: credit-manager
+    networks:
+      - saas
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+    ports:
+      - "7500:7500"
+    depends_on:
+      - mongo
+
+  solver-manager:
+    build:
+      context: ./solver-manager
+      dockerfile: Dockerfile
+    container_name: solver-manager
+    networks:
+      - saas
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+    ports:
+      - "8500:8500"
+    depends_on:
+      - mongo
+      - credit-manager
+
+  submissions-results:
+    build:
+      context: ./submissions-results
+      dockerfile: Dockerfile
+    container_name: submissions-results
+    networks:
+      - saas
+    environment:
+      MONGO_URL: mongodb://mongo:27017
+      CREDIT_MANAGER_URL: http://credit-manager:7500
+      SOLVER_MANAGER_URL: http://solver-manager:8500
+    ports:
+      - "5500:5500"
+    depends_on:
+      - mongo
+      - credit-manager
+      - solver-manager
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    networks:
+      - saas
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+
+networks:
+  saas:

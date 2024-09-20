@@ -1,0 +1,119 @@
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.upload-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.status-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 1.7em;
+    color: #007bff;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+.status-icon:hover {
+    color: #0056b3;
+}
+
+.metadata-edit-list {
+    max-height: 400px;
+    width: 30%;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.metadata-edit-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+    background-color: #ddd;
+    position: sticky;
+    top: 0;
+}
+
+.metadata-edit-header span {
+    flex: 1;
+    text-align: center;
+}
+
+.metadata-edit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    flex-wrap: nowrap;
+}
+
+.metadata-edit-item:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.metadata-edit-details {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.metadata-edit-details span {
+    flex: 1;
+    text-align: center;
+}
+
+.metadata-edit-title {
+    white-space: nowrap;
+}
+
+.metadata-edit-input {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metadata-edit-input input {
+    width: 100%;
+    padding: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.metadata-edit-input input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.metadata-edit-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

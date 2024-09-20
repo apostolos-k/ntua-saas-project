@@ -1,0 +1,134 @@
+.input-error {
+    border-color: #f4d14d !important;
+    outline: none;
+}
+
+.metadata-list {
+    max-height: 400px;
+    width: 40%;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.metadata-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+    background-color: #ddd;
+    position: sticky;
+    top: 0;
+}
+
+.metadata-header span {
+    flex: 1;
+    text-align: center;
+}
+
+.metadata-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    flex-wrap: nowrap;
+}
+
+.metadata-item:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.metadata-details {
+    display: flex;
+    flex: 3;
+    align-items: center;
+}
+
+.metadata-details span {
+    flex: 1;
+    text-align: center;
+}
+
+.metadata-title {
+    white-space: nowrap;
+}
+
+.metadata-input {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metadata-input input {
+    width: 100%;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.metadata-input input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.metadata-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.upload-form {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.error-message-submit {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+select#solverModel {
+    width: 50%;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    padding: 8px;
+}
+
+select#solverModel:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.solver-selection {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.solver-selection label {
+    margin-right: 10px;
+}

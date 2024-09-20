@@ -1,0 +1,107 @@
+.user-info {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #e9ecef;
+}
+
+.user-info > div {
+    flex: 1;
+}
+
+.user-info .left {
+    text-align: left;
+}
+
+.user-info .center {
+    text-align: center;
+}
+
+.user-info .right {
+    text-align: right;
+}
+
+/* Modal Styling */
+
+.modal {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #999;
+    font-size: 24px;
+}
+
+.modal-close:hover {
+    color: #333;
+}
+
+.modal-text-field {
+    width: 20%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error-message-modal {
+    color: red;
+    margin-top: 5px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-button {
+    appearance: none;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.modal-button:hover {
+    background-color: #0056b3;
+}
+
+.modal-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.modal-button.cancel {
+    background-color: #ccc;
+    color: #333;
+}

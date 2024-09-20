@@ -1,0 +1,16 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-text {
+    margin-bottom: 60px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.error-logo {
+    max-width: 500px;
+}

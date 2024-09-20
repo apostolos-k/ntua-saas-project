@@ -1,0 +1,66 @@
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.results-table th, .results-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.results-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.results-table tr:hover {
+    background-color: #ddd;
+}
+
+.highlight-row {
+    background-color: #BBE7E6;
+    color: black;
+}
+
+.download-section {
+    border: 1px solid #c9c9c9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.download-section h4 {
+    margin: 0 0 20px 0;
+}
+
+.pdf-button {
+    background-color: #B00902;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.csv-button {
+    background-color: #0D8246;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;}
+
+.json-button {
+    background-color: #7A15AD;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.no-results-image {
+    max-width: 30%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-content: center
+}

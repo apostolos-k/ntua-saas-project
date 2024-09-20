@@ -1,0 +1,114 @@
+.submissions-list {
+    max-height: 400px;
+    width: 80%;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.submissions-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+    background-color: #ddd;
+    position: sticky;
+    top: 0;
+}
+
+.submissions-header span {
+    flex: 1; /* Ensure this matches the flex value of the row spans */
+    text-align: center;
+    padding: 0 10px; /* Add padding for better spacing */
+}
+
+.submission-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    flex-wrap: nowrap;
+}
+
+.submission-item:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.submission-details {
+    display: flex;
+    flex: 3;
+    align-items: center;
+}
+
+.submission-details span {
+    flex: 1; /* Ensure this matches the flex value of the header spans */
+    text-align: center;
+    padding: 0 10px; /* Add padding for better spacing */
+}
+
+.submissions-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submission-actions {
+    display: flex;
+    justify-content: space-around; /* Changed to space-around for even spacing */
+    align-items: center;
+}
+
+.submission-actions button {
+    padding: 5px 10px;
+    margin: 0 5px; /* Adjust margin for consistent spacing */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submission-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.submission-actions button:hover {
+    background-color: #ddd;
+}
+
+.submission-actions button.delete {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #ff5a5a;
+    color: #fff;
+}
+
+.submission-actions button.delete:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.submission-actions button.delete:hover {
+    background-color: #ff1a1a;
+}
+
+.button-container {
+    margin-top: 40px;
+}
+
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust height as needed */
+    font-size: 1.2em;
+    color: #666; /* Adjust color as needed */
+}
