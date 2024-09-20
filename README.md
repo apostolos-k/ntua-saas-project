@@ -44,7 +44,7 @@ To get started with the project, follow these steps:
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/ntua/saas2024-30.git
+    git clone https://github.com/apostolos-k/ntua-saas-project.git
     cd saas2024-30
     ```
 
